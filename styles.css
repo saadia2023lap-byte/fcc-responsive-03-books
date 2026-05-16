@@ -1,0 +1,77 @@
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: rgba(211, 211, 211, 0.2);
+    }
+    h1{
+      text-align: center;
+      padding: 20px;
+    }
+    table{
+      width: 80%;
+      margin: 40px auto;
+      text-align: center;
+      font-size: 18px;
+      border-collapse: collapse;
+    }
+    th{
+      padding-bottom: 10px;
+      font-size: 20px;
+    }
+    td{
+      padding: 4px;
+    }
+    tr[class="read"]{
+      background-image: linear-gradient(to bottom, rgba(0, 255, 153, 0.2), rgba(0, 105, 123, 0.3));
+    }
+
+    tr[class="to-read"]{
+      background-image: linear-gradient(to bottom, rgba(3, 16, 230, 0.2), rgba(73, 16, 230, 0.2));
+    }
+
+    tr[class="in-progress"]{
+      background-image: linear-gradient(to bottom, rgba(200, 0, 120, 0.2), rgba(199, 0, 100, 0.3));
+    }
+    span{
+      display: inline-block;
+    }
+
+    tr[class="read"] span[class="status"]{
+    border: 1px solid black;
+    border-radius: 9px;
+    background-image: linear-gradient(to bottom, rgba(0, 255, 153, 0.3), rgba(0, 105, 123, 0.5));
+    }
+    tr[class="to-read"] span[class="status"]{
+    border: 1px solid black;
+    border-radius: 9px;
+    background-image: linear-gradient(to bottom, rgba(3, 16, 230, 0.3), rgba(73, 16, 230, 0.3));
+    }
+    tr[class="in-progress"] span[class="status"]{
+    border: 1px solid black;
+    border-radius: 9px;
+    background-image: linear-gradient(to bottom, rgba(200, 0, 120, 0.3), rgba(199, 0, 100, 0.4));
+    }
+    span[class="status"], span[class^="rate"]{
+      width: 130px;
+      padding: 10px;
+    }
+    span[class^="rate"] > span{
+      border: 1px solid black;
+      border-radius: 50%;
+      margin: 5px;
+      height: 23px;
+      width: 23px;
+      background-color: rgb(250, 250, 250);
+    }
+    span[class~="one"] > span:first-child{
+      background-image: linear-gradient(to bottom, rgb(255, 255, 0), rgb(255, 200, 0));
+    }
+    span[class~="two"] > span:nth-child(-n+2)  {
+     background-image: linear-gradient(to bottom, rgb(255, 255, 0), rgb(255, 200, 0));
+    }
+    span[class~="three"] span{
+      background-image: linear-gradient(to bottom, rgb(255, 255, 0), rgb(255, 200, 0));
+    }
